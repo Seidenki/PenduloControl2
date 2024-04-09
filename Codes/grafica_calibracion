@@ -1,0 +1,13 @@
+xfit = [0:1:500];
+yfit = p(1)*xfit + p(2);
+plot(xfit,yfit,x,y,'ro')
+xlabel('Output Voltage (bits)')
+ylabel('Angular Position (degrees)')
+legend('fitted curve','recorded data','Location','NorthWest')
+text(200,-20,'y = 0.1985x - 49.6077')
+
+
+tpi=expi.time();
+xpi=expi.signals.values();
+xpi=squeeze(xpi)
+plot(tpi,xpi)
